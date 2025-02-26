@@ -1,0 +1,104 @@
+.main{
+    color: white;
+    padding-top: 100px;
+}
+
+.filterDiv{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 50px;
+}
+
+.filterDiv input{
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.filterDiv input:focus-within{
+    outline: none;
+}
+
+.divider{
+    background: white;
+    height: 1px;
+    border-radius: 50%;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.prodContainer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination{
+    display: flex;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.pagination span{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 20px;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.pagination button{
+    font-size: 15px;
+    height: 35px;
+    width: 35px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.pagination button:hover{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.activePage{
+    background: white;
+    color: #1B1F3B;
+
+}
+
+.scrollToTopBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.scrollToTopBtn:hover{
+    animation: chaloUpar 1s ease  infinite  alternate;
+}
+
+@keyframes chaloUpar {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}

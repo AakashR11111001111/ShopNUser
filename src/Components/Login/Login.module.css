@@ -1,0 +1,185 @@
+.main{
+    user-select: none;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/login-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loginContainer{
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(100px);
+    position: relative;
+}
+
+.loginContainer input{
+    color: black;
+}
+.loginContainer::after{
+    content: "";
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #E5BE01;
+    filter: blur(50px);
+    z-index: -20;
+    animation: move 2s linear  infinite  alternate-reverse;
+}
+
+.loginContainer::before{
+    content: "";
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: blue;
+    filter: blur(80px);
+    z-index: -20;
+    animation: move 2s linear infinite alternate-reverse;
+}
+
+.loginContainer .formHead{
+    text-align: center;
+}
+
+.loginContainer .formHead{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 30vw;
+}
+
+.field input{
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.field input:focus-within{
+    border: none;
+    outline: none;
+}
+
+.loginBtn{
+    cursor: pointer;
+    background:  #2271B3;
+    border: none;   
+    padding: 5px 15px;
+    border-radius: 100px;
+    color: white;
+    font-size: 16px;
+    margin: 10px auto;
+    transition: all 0.15s ease;
+}
+
+.loginBtn:hover{
+    color: #2271B3;
+    background: white;
+}
+
+.more{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.more label{
+    font-size: 12px;
+}
+
+.more label a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.more label a:hover{
+    text-decoration: underline;
+}
+
+.more div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formEnd p{
+    font-size: 13px;
+}
+
+.formEnd p a{
+    text-decoration: none;
+    color: rgb(0, 0, 255);
+}
+
+.formEnd p a:hover{
+    text-decoration: underline;
+}
+
+.formEnd div img{
+    height: 40px;
+    width: 40px;
+    margin: 10px auto;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.formEnd div img:hover{
+    cursor: pointer;
+    filter: drop-shadow(0 0 3px white);
+}
+
+.toggleBtn{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.toggleBtn:hover{
+    text-decoration: underline;
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    
+    100%{
+        transform: translateX(20px) translateY(30px) scale(1.5);
+    }
+    
+}
